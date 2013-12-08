@@ -141,3 +141,4 @@ Using rack adapter
 Thin web server (v1.6.1 codename Death Proof)
 Maximum connections set to 1024
 Listening on 0.0.0.0:1097, CTRL+C to stop
+127.0.0.1 - - [08/Dec/2013 18:45:28] "GET / HTTP/1.0" 200 4071 0.0092
