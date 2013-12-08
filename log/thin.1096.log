@@ -1,0 +1,128 @@
+Writing PID to tmp/pids/thin.1096.pid
+No adapter found for /home/will/twitter_analyser
+Exiting!
+Writing PID to tmp/pids/thin.1096.pid
+Using rack adapter
+Exiting!
+/home/will/twitter_analyser/app.rb:2:in `require': cannot load such file -- sinatra (LoadError)
+	from /home/will/twitter_analyser/app.rb:2:in `<top (required)>'
+	from /home/will/twitter_analyser/config.ru:1:in `require'
+	from /home/will/twitter_analyser/config.ru:1:in `block in <main>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `instance_eval'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `initialize'
+	from /home/will/twitter_analyser/config.ru:1:in `new'
+	from /home/will/twitter_analyser/config.ru:1:in `<main>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/rack/adapter/loader.rb:33:in `eval'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/rack/adapter/loader.rb:33:in `load'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/rack/adapter/loader.rb:42:in `for'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/controllers/controller.rb:170:in `load_adapter'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/controllers/controller.rb:74:in `start'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/runner.rb:200:in `run_command'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/runner.rb:156:in `run!'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/bin/thin:6:in `<top (required)>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/thin:23:in `load'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/thin:23:in `<main>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/ruby_noexec_wrapper:14:in `eval'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/ruby_noexec_wrapper:14:in `<main>'
+Writing PID to tmp/pids/thin.1096.pid
+Using rack adapter
+Exiting!
+/home/will/twitter_analyser/app.rb:2:in `require': cannot load such file -- sinatra (LoadError)
+	from /home/will/twitter_analyser/app.rb:2:in `<top (required)>'
+	from /home/will/twitter_analyser/config.ru:1:in `require'
+	from /home/will/twitter_analyser/config.ru:1:in `block in <main>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `instance_eval'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `initialize'
+	from /home/will/twitter_analyser/config.ru:1:in `new'
+	from /home/will/twitter_analyser/config.ru:1:in `<main>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/rack/adapter/loader.rb:33:in `eval'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/rack/adapter/loader.rb:33:in `load'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/rack/adapter/loader.rb:42:in `for'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/controllers/controller.rb:170:in `load_adapter'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/controllers/controller.rb:74:in `start'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/runner.rb:200:in `run_command'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/runner.rb:156:in `run!'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/bin/thin:6:in `<top (required)>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/thin:23:in `load'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/thin:23:in `<main>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/ruby_noexec_wrapper:14:in `eval'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/ruby_noexec_wrapper:14:in `<main>'
+Writing PID to tmp/pids/thin.1096.pid
+Using rack adapter
+Exiting!
+/home/will/twitter_analyser/app.rb:2:in `require': cannot load such file -- sinatra (LoadError)
+	from /home/will/twitter_analyser/app.rb:2:in `<top (required)>'
+	from /home/will/twitter_analyser/config.ru:1:in `require'
+	from /home/will/twitter_analyser/config.ru:1:in `block in <main>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `instance_eval'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `initialize'
+	from /home/will/twitter_analyser/config.ru:1:in `new'
+	from /home/will/twitter_analyser/config.ru:1:in `<main>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/rack/adapter/loader.rb:33:in `eval'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/rack/adapter/loader.rb:33:in `load'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/rack/adapter/loader.rb:42:in `for'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/controllers/controller.rb:170:in `load_adapter'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/controllers/controller.rb:74:in `start'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/runner.rb:200:in `run_command'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/runner.rb:156:in `run!'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/bin/thin:6:in `<top (required)>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/thin:23:in `load'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/thin:23:in `<main>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/ruby_noexec_wrapper:14:in `eval'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/ruby_noexec_wrapper:14:in `<main>'
+Writing PID to tmp/pids/thin.1096.pid
+Using rack adapter
+Exiting!
+/home/will/twitter_analyser/app.rb:2:in `require': cannot load such file -- sinatra (LoadError)
+	from /home/will/twitter_analyser/app.rb:2:in `<top (required)>'
+	from /home/will/twitter_analyser/config.ru:1:in `require'
+	from /home/will/twitter_analyser/config.ru:1:in `block in <main>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `instance_eval'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `initialize'
+	from /home/will/twitter_analyser/config.ru:1:in `new'
+	from /home/will/twitter_analyser/config.ru:1:in `<main>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/rack/adapter/loader.rb:33:in `eval'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/rack/adapter/loader.rb:33:in `load'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/rack/adapter/loader.rb:42:in `for'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/controllers/controller.rb:170:in `load_adapter'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/controllers/controller.rb:74:in `start'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/runner.rb:200:in `run_command'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/runner.rb:156:in `run!'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/bin/thin:6:in `<top (required)>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/thin:23:in `load'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/thin:23:in `<main>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/ruby_noexec_wrapper:14:in `eval'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/ruby_noexec_wrapper:14:in `<main>'
+Writing PID to tmp/pids/thin.1096.pid
+Using rack adapter
+Exiting!
+/home/will/twitter_analyser/app.rb:2:in `require': cannot load such file -- sinatra (LoadError)
+	from /home/will/twitter_analyser/app.rb:2:in `<top (required)>'
+	from /home/will/twitter_analyser/config.ru:1:in `require'
+	from /home/will/twitter_analyser/config.ru:1:in `block in <main>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `instance_eval'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/rack-1.5.2/lib/rack/builder.rb:55:in `initialize'
+	from /home/will/twitter_analyser/config.ru:1:in `new'
+	from /home/will/twitter_analyser/config.ru:1:in `<main>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/rack/adapter/loader.rb:33:in `eval'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/rack/adapter/loader.rb:33:in `load'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/rack/adapter/loader.rb:42:in `for'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/controllers/controller.rb:170:in `load_adapter'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/controllers/controller.rb:74:in `start'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/runner.rb:200:in `run_command'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/lib/thin/runner.rb:156:in `run!'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/gems/thin-1.6.1/bin/thin:6:in `<top (required)>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/thin:23:in `load'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/thin:23:in `<main>'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/ruby_noexec_wrapper:14:in `eval'
+	from /home/will/.rvm/gems/ruby-2.0.0-p0/bin/ruby_noexec_wrapper:14:in `<main>'
+Writing PID to tmp/pids/thin.1096.pid
+Using rack adapter
+Thin web server (v1.6.1 codename Death Proof)
+Maximum connections set to 1024
+Listening on 0.0.0.0:1096, CTRL+C to stop
+127.0.0.1 - - [08/Dec/2013 02:55:38] "GET / HTTP/1.0" 200 3926 0.0111
+127.0.0.1 - - [08/Dec/2013 03:07:07] "GET / HTTP/1.0" 200 3926 0.0013
+127.0.0.1 - - [08/Dec/2013 04:05:41] "GET / HTTP/1.0" 200 3926 0.0013
+W, [2013-12-08T04:09:37.887780 #14263]  WARN -- : attack prevented by Rack::Protection::HttpOrigin
+127.0.0.1 - - [08/Dec/2013 04:09:53] "POST /analysis HTTP/1.0" 200 9558 15.9499

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Twitter Archive Analysis</title>
+  <style type="text/css">
+    header, main, body, html {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font: 14px Avenir,'Helvetica Neue',Helvetica,Arial,sans-serif;
+      /*color:#7F8E98; */
+      color: #5E646E;
+    }
+    .circle {
+      display: block;
+      width: 150px;
+      height: 150px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-border-radius: 99em;
+      -moz-border-radius: 99em;
+      border-radius: 99em;
+      border: 5px solid #eee;
+      box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);  
+      float:left;
+    }
+    h1,h2,h3 {
+      margin: 0;
+      color: #475C80;
+      font-weight: 200;
+    }
+    header {
+      padding: 20px;
+      border-bottom:1px solid #E0E0E0;
+    }
+    header h1 {
+      display: inline;
+    }
+    header p {
+      display: inline;
+      float: right;
+    }
+    main a, a:hover, a:visited {
+      text-decoration: none;
+      color: #5E646E;
+    }
+    .info {
+      float: right;
+      height: 200px;
+    }
+    section:nth-child(even) {
+      background-color: #F0F0F0;
+    }
+    section{
+      min-height: 240px;
+      padding: 20px;
+      border-bottom: 1px solid #DBDBDB;
+    }
+    .clear {
+      clear: both;
+    }
+    .title {
+      text-align: center;
+      padding: 10px;
+    }
+    .dial-wrap {
+      margin-right: 30px;
+      display: inline-block;
+    }
+    .caption {
+      text-align: center;
+    }
+    .wrapper {
+      margin: 0 auto;
+      text-align: center;
+    }
+    .indented a{
+      text-decoration: underline;
+    }
+    @media all and (max-width: 700px) {
+      .circle {
+        float: none;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom:20px;
+      }
+      .image {
+        text-align: center;
+      }
+      .info {
+        float: none;
+        text-align: center;
+      }
+      header p {
+        display: block;
+        text-align: center;
+        float: none;
+      }
+      header h1 {
+        text-align: center;
+        display: block;
+      }
+    }
+    .indented {
+      padding: 20px;
+    }
+    .screenshot {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Twitter Archive Analysis</h1><p>An experiment by <a href="http://twitter.com/will3942">Will Evans</a></p>
+  </header>
+  <main>
+    <div class="indented">
+      <h2>What is it?</h2>
+      <p>This is a project that I built to investigate what data Twitter was actually giving is inside the tweets archive that you can download from <a href="http://twitter.com/settings/account">http://twitter.com/settings/account</a>. I've used <i>basic</i> sentiment analysis to form opinions about who you are and what your twitter account tweets about. I've also chucked in various information that is also available in the twitter archive. This project simply analyses the archive, specifically the JSON data available and then displays its findings in an easy-to-read format.</p>
+      <h2>Do you keep my data?</h2>
+      <p>No. As soon as the zip file has been uploaded and the tweets analysed, the zip file is destroyed and the analysed data is never saved, it is posted straight to your browser.</p>
+      <h2>Screenshot?</h2>
+      <a href="screenshot.png"><img class="screenshot" src="screenshot.png"></a>
+      <h2>How do I use it?</h2>
+      <p>Simply download your tweets archive from <a href="http://twitter.com/settings/account">http://twitter.com/settings/account</a> and upload it (in .zip form) below and your tweets will be analysed. <b>This may take up to 30 seconds depending on how much data you have.</b></p>
+    </div>
+    <div class="indented">
+      <form method="post" action="/analysis" enctype="multipart/form-data">
+        <input type="file" name="tweets_zip"><br />
+        <input type="submit" value="Upload & Analyse">
+      </form>
+    </div>
+  </main>
+</body>
+</html>
