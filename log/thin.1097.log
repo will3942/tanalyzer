@@ -127,3 +127,10 @@ W, [2013-12-08T02:56:09.440876 #14273]  WARN -- : attack prevented by Rack::Prot
 127.0.0.1 - - [08/Dec/2013 04:05:42] "GET /favicon.ico HTTP/1.0" 404 18 0.0007
 127.0.0.1 - - [08/Dec/2013 09:02:12] "GET / HTTP/1.0" 200 3926 0.0048
 127.0.0.1 - - [08/Dec/2013 14:38:36] "GET / HTTP/1.0" 200 3926 0.0012
+Exiting!
+Writing PID to tmp/pids/thin.1097.pid
+Using rack adapter
+Thin web server (v1.6.1 codename Death Proof)
+Maximum connections set to 1024
+Listening on 0.0.0.0:1097, CTRL+C to stop
+127.0.0.1 - - [08/Dec/2013 17:48:44] "GET / HTTP/1.0" 200 3926 0.0087
