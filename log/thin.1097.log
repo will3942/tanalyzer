@@ -134,3 +134,10 @@ Thin web server (v1.6.1 codename Death Proof)
 Maximum connections set to 1024
 Listening on 0.0.0.0:1097, CTRL+C to stop
 127.0.0.1 - - [08/Dec/2013 17:48:44] "GET / HTTP/1.0" 200 3926 0.0087
+127.0.0.1 - - [08/Dec/2013 18:16:28] "GET / HTTP/1.0" 200 3926 0.0011
+Exiting!
+Writing PID to tmp/pids/thin.1097.pid
+Using rack adapter
+Thin web server (v1.6.1 codename Death Proof)
+Maximum connections set to 1024
+Listening on 0.0.0.0:1097, CTRL+C to stop
