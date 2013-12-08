@@ -131,64 +131,74 @@
       <h1 class="title">@<%= @analysis["user"]["username"] %>'s opinion on coffee shops</h1>
       <div class="wrapper">
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["starbucks"]["pc_good"].to_i > @analysis["sentiment_data"]["starbucks"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["starbucks"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["starbucks"]["pc_bad"].to_i == 0  %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for Starbucks.</p>
+          <% elsif @analysis["sentiment_data"]["starbucks"]["pc_good"].to_i >= @analysis["sentiment_data"]["starbucks"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["starbucks"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["starbucks"]["pc_good"] %>% love for Starbucks.</p>
           <% elsif @analysis["sentiment_data"]["starbucks"]["pc_bad"].to_i > @analysis["sentiment_data"]["starbucks"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["starbucks"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["starbucks"]["pc_bad"].to_i %>% dislike for Starbucks.</p>
-          <% else %>
-            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-            <p class="caption">No feeling for Starbucks.</p>
           <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["starbucks"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["starbucks"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["starbucks"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["starbucks"]["count"] %></p>
         </div>
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["pret"]["pc_good"].to_i > @analysis["sentiment_data"]["pret"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["pret"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["pret"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for Pret A Manger.</p>
+          <% elsif @analysis["sentiment_data"]["pret"]["pc_good"].to_i >= @analysis["sentiment_data"]["pret"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["pret"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["pret"]["pc_good"] %>% love for Pret A Manger.</p>
           <% elsif @analysis["sentiment_data"]["pret"]["pc_bad"].to_i > @analysis["sentiment_data"]["pret"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["pret"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["pret"]["pc_bad"].to_i %>% dislike for Pret A Manger.</p>
-          <% else %>
-            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-            <p class="caption">No feeling for Pret A Manger.</p>
           <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["pret"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["pret"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["pret"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["pret"]["count"] %></p>
         </div>
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["dunkin"]["pc_good"].to_i > @analysis["sentiment_data"]["dunkin"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["dunkin"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["dunkin"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for Dunkin' Donuts.</p>
+          <% elsif @analysis["sentiment_data"]["dunkin"]["pc_good"].to_i >= @analysis["sentiment_data"]["dunkin"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["dunkin"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["dunkin"]["pc_good"] %>% love for Dunkin' Donuts.</p>
           <% elsif @analysis["sentiment_data"]["dunkin"]["pc_bad"].to_i > @analysis["sentiment_data"]["dunkin"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["dunkin"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["dunkin"]["pc_bad"].to_i %>% dislike for Dunkin' Donuts.</p>
-          <% else %>
-            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-            <p class="caption">No feeling for Dunkin' Donuts.</p>
           <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["dunkin"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["dunkin"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["dunkin"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["dunkin"]["count"] %></p>
         </div>
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["costa"]["pc_good"].to_i > @analysis["sentiment_data"]["costa"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["costa"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["costa"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for Costa Coffee.</p>
+          <% elsif @analysis["sentiment_data"]["costa"]["pc_good"].to_i >= @analysis["sentiment_data"]["costa"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["costa"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["costa"]["pc_good"] %>% love for Costa Coffee.</p>
           <% elsif @analysis["sentiment_data"]["costa"]["pc_bad"].to_i > @analysis["sentiment_data"]["costa"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["costa"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["costa"]["pc_bad"].to_i %>% dislike for Costa Coffee.</p>
-          <% else %>
-            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-            <p class="caption">No feeling for Costa Coffee.</p>
           <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["costa"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["costa"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["costa"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["costa"]["count"] %></p>
         </div>
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["coffee"]["pc_good"].to_i > @analysis["sentiment_data"]["coffee"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["coffee"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["coffee"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for coffee.</p>
+          <% elsif @analysis["sentiment_data"]["coffee"]["pc_good"].to_i >= @analysis["sentiment_data"]["coffee"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["coffee"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["coffee"]["pc_good"] %>% love for coffee.</p>
           <% elsif @analysis["sentiment_data"]["coffee"]["pc_bad"].to_i > @analysis["sentiment_data"]["coffee"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["coffee"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["coffee"]["pc_bad"].to_i %>% dislike for coffee.</p>
-          <% else %>
-            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-            <p class="caption">No feeling for coffee.</p>
           <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["coffee"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["coffee"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["coffee"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["coffee"]["count"] %></p>
         </div>
         <br class="clear">
       </div>
@@ -197,64 +207,74 @@
       <h1 class="title">@<%= @analysis["user"]["username"] %>'s opinion on sports</h1>
       <div class="wrapper">
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["football"]["pc_good"].to_i > @analysis["sentiment_data"]["football"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["football"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["football"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for football.</p>
+          <% elsif @analysis["sentiment_data"]["football"]["pc_good"].to_i >= @analysis["sentiment_data"]["football"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["football"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["football"]["pc_good"] %>% love for football.</p>
           <% elsif @analysis["sentiment_data"]["football"]["pc_bad"].to_i > @analysis["sentiment_data"]["football"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["football"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["football"]["pc_bad"].to_i %>% dislike for football.</p>
-            <% else %>
-              <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-              <p class="caption">No feeling for football.</p>
-            <% end %>
+          <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["football"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["football"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["football"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["football"]["count"] %></p>
         </div>
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["cricket"]["pc_good"].to_i > @analysis["sentiment_data"]["cricket"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["cricket"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["cricket"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for cricket.</p>
+          <% elsif @analysis["sentiment_data"]["cricket"]["pc_good"].to_i >= @analysis["sentiment_data"]["cricket"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["cricket"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["cricket"]["pc_good"] %>% love for cricket.</p>
           <% elsif @analysis["sentiment_data"]["cricket"]["pc_bad"].to_i > @analysis["sentiment_data"]["cricket"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["cricket"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["cricket"]["pc_bad"].to_i %>% dislike for cricket.</p>
-            <% else %>
-              <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-              <p class="caption">No feeling for cricket.</p>
-            <% end %>
+          <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["cricket"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["cricket"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["cricket"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["cricket"]["count"] %></p>
         </div>
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["hockey"]["pc_good"].to_i > @analysis["sentiment_data"]["hockey"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["hockey"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["hockey"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for hockey.</p>
+          <% elsif @analysis["sentiment_data"]["hockey"]["pc_good"].to_i >= @analysis["sentiment_data"]["hockey"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["hockey"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["hockey"]["pc_good"] %>% love for hockey.</p>
           <% elsif @analysis["sentiment_data"]["hockey"]["pc_bad"].to_i > @analysis["sentiment_data"]["hockey"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["hockey"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["hockey"]["pc_bad"].to_i %>% dislike for hockey.</p>
-            <% else %>
-              <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-              <p class="caption">No feeling for hockey.</p>
-            <% end %>
+          <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["hockey"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["hockey"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["hockey"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["hockey"]["count"] %></p>
         </div>
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["rugby"]["pc_good"].to_i > @analysis["sentiment_data"]["rugby"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["rugby"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["rugby"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for rugby.</p>
+          <% elsif @analysis["sentiment_data"]["rugby"]["pc_good"].to_i >= @analysis["sentiment_data"]["rugby"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["rugby"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["rugby"]["pc_good"] %>% love for rugby.</p>
           <% elsif @analysis["sentiment_data"]["rugby"]["pc_bad"].to_i > @analysis["sentiment_data"]["rugby"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["rugby"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["rugby"]["pc_bad"].to_i %>% dislike for rugby.</p>
-            <% else %>
-              <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-              <p class="caption">No feeling for rugby.</p>
-            <% end %>
+          <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["rugby"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["rugby"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["rugby"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["rugby"]["count"] %></p>
         </div>
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["soccer"]["pc_good"].to_i > @analysis["sentiment_data"]["soccer"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["soccer"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["soccer"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for soccer.</p>
+          <% elsif @analysis["sentiment_data"]["soccer"]["pc_good"].to_i >= @analysis["sentiment_data"]["soccer"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["soccer"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["soccer"]["pc_good"] %>% love for soccer.</p>
           <% elsif @analysis["sentiment_data"]["soccer"]["pc_bad"].to_i > @analysis["sentiment_data"]["soccer"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["soccer"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["soccer"]["pc_bad"].to_i %>% dislike for soccer.</p>
-            <% else %>
-              <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-              <p class="caption">No feeling for soccer.</p>
-            <% end %>
+          <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["soccer"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["soccer"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["soccer"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["soccer"]["count"] %></p>
         </div>
       </div>
     </section>
@@ -262,40 +282,46 @@
       <h1 class="title">@<%= @analysis["user"]["username"] %>'s opinion on iPhone, Android and Blackberry</h1>
       <div class="wrapper">
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["iphone"]["pc_good"].to_i > @analysis["sentiment_data"]["iphone"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["iphone"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["iphone"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for iPhone.</p>
+          <% elsif @analysis["sentiment_data"]["iphone"]["pc_good"].to_i >= @analysis["sentiment_data"]["iphone"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["iphone"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["iphone"]["pc_good"] %>% love for iPhone.</p>
           <% elsif @analysis["sentiment_data"]["iphone"]["pc_bad"].to_i > @analysis["sentiment_data"]["iphone"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["iphone"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["iphone"]["pc_bad"].to_i %>% dislike for iPhone.</p>
-            <% else %>
-              <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-              <p class="caption">No feeling for iPhone.</p>
-            <% end %>
+          <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["iphone"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["iphone"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["iphone"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["iphone"]["count"] %></p>
         </div>
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["android"]["pc_good"].to_i > @analysis["sentiment_data"]["android"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["android"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["android"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for Android.</p>
+          <% elsif @analysis["sentiment_data"]["android"]["pc_good"].to_i >= @analysis["sentiment_data"]["android"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["android"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["android"]["pc_good"] %>% love for Android.</p>
           <% elsif @analysis["sentiment_data"]["android"]["pc_bad"].to_i > @analysis["sentiment_data"]["android"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["android"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["android"]["pc_bad"].to_i %>% dislike for Android.</p>
-            <% else %>
-              <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-              <p class="caption">No feeling for Android.</p>
-            <% end %>
+          <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["android"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["android"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["android"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["android"]["count"] %></p>
         </div>
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["blackberry"]["pc_good"].to_i > @analysis["sentiment_data"]["blackberry"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["blackberry"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["blackberry"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for Blackberry.</p>
+          <% elsif @analysis["sentiment_data"]["blackberry"]["pc_good"].to_i >= @analysis["sentiment_data"]["blackberry"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["blackberry"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["blackberry"]["pc_good"] %>% love for Blackberry.</p>
           <% elsif @analysis["sentiment_data"]["blackberry"]["pc_bad"].to_i > @analysis["sentiment_data"]["blackberry"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["blackberry"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["blackberry"]["pc_bad"].to_i %>% dislike for Blackberry.</p>
-            <% else %>
-              <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-              <p class="caption">No feeling for Blackberry.</p>
-            <% end %>
+          <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["blackberry"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["blackberry"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["blackberry"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["blackberry"]["count"] %></p>
         </div>
       </div>
     </section>
@@ -303,40 +329,46 @@
       <h1 class="title">@<%= @analysis["user"]["username"] %>'s opinion on Mac OS X, Windows and Linux</h1>
       <div class="wrapper">
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["mac"]["pc_good"].to_i > @analysis["sentiment_data"]["mac"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["mac"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["mac"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for Mac OS X.</p>
+          <% elsif @analysis["sentiment_data"]["mac"]["pc_good"].to_i >= @analysis["sentiment_data"]["mac"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["mac"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["mac"]["pc_good"] %>% love for Mac OS X.</p>
           <% elsif @analysis["sentiment_data"]["mac"]["pc_bad"].to_i > @analysis["sentiment_data"]["mac"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["mac"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["mac"]["pc_bad"].to_i %>% dislike for Mac OS X.</p>
-            <% else %>
-              <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-              <p class="caption">No feeling for Mac OS X.</p>
-            <% end %>
+          <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["mac"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["mac"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["mac"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["mac"]["count"] %></p>
         </div>
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["windows"]["pc_good"].to_i > @analysis["sentiment_data"]["windows"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["windows"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["windows"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for Windows.</p>
+          <% elsif @analysis["sentiment_data"]["windows"]["pc_good"].to_i >= @analysis["sentiment_data"]["windows"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["windows"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["windows"]["pc_good"] %>% love for Windows.</p>
           <% elsif @analysis["sentiment_data"]["windows"]["pc_bad"].to_i > @analysis["sentiment_data"]["windows"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["windows"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["windows"]["pc_bad"].to_i %>% dislike for Windows.</p>
-            <% else %>
-              <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-              <p class="caption">No feeling for Windows.</p>
-            <% end %>
+          <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["windows"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["windows"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["windows"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["windows"]["count"] %></p>
         </div>
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["linux"]["pc_good"].to_i > @analysis["sentiment_data"]["linux"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["linux"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["linux"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for Linux.</p>
+          <% elsif @analysis["sentiment_data"]["linux"]["pc_good"].to_i >= @analysis["sentiment_data"]["linux"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["linux"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["linux"]["pc_good"] %>% love for Linux.</p>
           <% elsif @analysis["sentiment_data"]["linux"]["pc_bad"].to_i > @analysis["sentiment_data"]["linux"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["linux"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["linux"]["pc_bad"].to_i %>% dislike for Linux.</p>
-            <% else %>
-              <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-              <p class="caption">No feeling for Linux.</p>
-            <% end %>
+          <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["linux"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["linux"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["linux"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["linux"]["count"] %></p>
         </div>
       </div>
     </section>
@@ -344,40 +376,46 @@
       <h1 class="title">@<%= @analysis["user"]["username"] %>'s opinion on Apple, Microsoft and Google</h1>
       <div class="wrapper">
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["apple"]["pc_good"].to_i > @analysis["sentiment_data"]["apple"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["apple"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["apple"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for Apple.</p>
+          <% elsif @analysis["sentiment_data"]["apple"]["pc_good"].to_i >= @analysis["sentiment_data"]["apple"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["apple"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["apple"]["pc_good"] %>% love for Apple.</p>
           <% elsif @analysis["sentiment_data"]["apple"]["pc_bad"].to_i > @analysis["sentiment_data"]["apple"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["apple"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["apple"]["pc_bad"].to_i %>% dislike for Apple.</p>
-            <% else %>
-              <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-              <p class="caption">No feeling for Apple.</p>
-            <% end %>
+          <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["apple"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["apple"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["apple"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["apple"]["count"] %></p>
         </div>
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["microsoft"]["pc_good"].to_i > @analysis["sentiment_data"]["microsoft"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["microsoft"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["microsoft"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for Microsoft.</p>
+          <% elsif @analysis["sentiment_data"]["microsoft"]["pc_good"].to_i >= @analysis["sentiment_data"]["microsoft"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["microsoft"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["microsoft"]["pc_good"] %>% love for Microsoft.</p>
           <% elsif @analysis["sentiment_data"]["microsoft"]["pc_bad"].to_i > @analysis["sentiment_data"]["microsoft"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["microsoft"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["microsoft"]["pc_bad"].to_i %>% dislike for Microsoft.</p>
-            <% else %>
-              <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-              <p class="caption">No feeling for Microsoft.</p>
-            <% end %>
+          <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["microsoft"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["microsoft"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["microsoft"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["microsoft"]["count"] %></p>
         </div>
         <div class="dial-wrap">
-          <% if @analysis["sentiment_data"]["google"]["pc_good"].to_i > @analysis["sentiment_data"]["google"]["pc_bad"].to_i %>
+          <% if @analysis["sentiment_data"]["google"]["pc_good"].to_i == 0 and @analysis["sentiment_data"]["google"]["pc_bad"].to_i == 0 %>
+            <input type="text" class="dial" value="0" data-fgColor="#5E646E">
+            <p class="caption">No feeling for Google.</p>
+          <% elsif @analysis["sentiment_data"]["google"]["pc_good"].to_i >= @analysis["sentiment_data"]["google"]["pc_bad"].to_i %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["google"]["pc_good"] %>" data-fgColor="#66CC66">
             <p class="caption"><%= @analysis["sentiment_data"]["google"]["pc_good"] %>% love for Google.</p>
           <% elsif @analysis["sentiment_data"]["google"]["pc_bad"].to_i > @analysis["sentiment_data"]["google"]["pc_good"].to_i  %>
             <input type="text" class="dial" value="<%= @analysis["sentiment_data"]["google"]["pc_bad"].to_i %>" data-fgColor="#FF0000">
             <p class="caption"><%= @analysis["sentiment_data"]["google"]["pc_bad"].to_i %>% dislike for Google.</p>
-            <% else %>
-              <input type="text" class="dial" value="0" data-fgColor="#5E646E">
-              <p class="caption">No feeling for Google.</p>
-            <% end %>
+          <% end %>
+          <p class="caption"><%= @analysis["sentiment_data"]["google"]["good"] %> good tweets out of <%= @analysis["sentiment_data"]["google"]["count"] %></p>
+          <p class="caption"><%= @analysis["sentiment_data"]["google"]["bad"] %> bad tweets out of <%= @analysis["sentiment_data"]["google"]["count"] %></p>
         </div>
       </div>
     </section>

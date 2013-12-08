@@ -126,3 +126,6 @@ Listening on 0.0.0.0:1096, CTRL+C to stop
 127.0.0.1 - - [08/Dec/2013 04:05:41] "GET / HTTP/1.0" 200 3926 0.0013
 W, [2013-12-08T04:09:37.887780 #14263]  WARN -- : attack prevented by Rack::Protection::HttpOrigin
 127.0.0.1 - - [08/Dec/2013 04:09:53] "POST /analysis HTTP/1.0" 200 9558 15.9499
+127.0.0.1 - - [08/Dec/2013 13:34:17] "GET /favicon.ico HTTP/1.0" 404 18 0.0014
+W, [2013-12-08T14:39:55.466037 #14263]  WARN -- : attack prevented by Rack::Protection::HttpOrigin
+127.0.0.1 - - [08/Dec/2013 14:40:04] "POST /analysis HTTP/1.0" 200 9446 9.3974
